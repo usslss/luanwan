@@ -1,89 +1,36 @@
-﻿<!DOCTYPE html>
+﻿<?php
+include_once "php/connect.php";
+$page = "index";
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 
 	<head>
 		<meta charset="UTF-8">
-		<title>乱丸_乱丸加盟_您身边的热卤管家</title>
+		<?php include_once "php/keywords.php";?>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery.slides.min.js"></script>
 		<script type="text/javascript" src="js/base.js"></script>
-		
+
 	</head>
 
 	<body>
-		<!-- header-->
-		<div class="header">
-			<div class="main">
-				<a href="index.html" class="header_logo" ><img src="picture/logo.png" ></a>
-				<div class="header_phone">400-0570-288</div>
-			</div>
-		</div>
-		<!-- /header-->
-		<!-- menu -->
-		<div class="menu">
-			<div class="main">
-				<ul class="menu_ul">
-					<li class="active">
-						<a href="index.html">首页</a>
-					</li>
-					<li>
-						<a href="about.html">关于乱丸</a>
-					</li>
-					<li>
-						<a href="product.html">产品展示</a>
-					</li>
-					<li>
-						<a href="news.html">新闻资讯</a>
-					</li>
-					<li>
-						<a href="join.html">招商加盟</a>
-					</li>
-					<li>
-						<a href="contact.html">联系我们</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!-- /menu -->
+		<!-- header -->
+		<?php include_once "php/header.php";?>
+		<!-- header end -->
 
 		<!-- slider -->
-		<div class="index_slider">
-			<a href="javascript:void(0)"><img src="picture/1523172352.jpg" alt="banner1" /></a>
-			<a href="javascript:void(0)"><img src="picture/1523172367.jpg" alt="banner12" /></a>
-			<a href="javascript:void(0)"><img src="picture/1523172384.jpg" alt="banner13" /></a>
-		</div>
-		<!-- /slider -->
+		<?php include_once "php/index/slider.php";?>
+		<!-- sliker end -->
 
-		<div class="index_producttype">
-			<div class="p_title main"><img src="picture/img_title1.png" alt="你的热卤专家"></div>
-			<ul class="ip_list main">
+		<!-- product class list -->
+		<?php include_once "php/index/product_class_list.php";?>
+		<!-- product class list end -->	
 
-				<li>
-					<img src="picture/thumb_1523172285.png" alt="乱丸卤味系列">
-					<p class="p1">乱丸卤味系列</p>
-					<p class="p2">MARINATED SERIES</p>
-					<a href="product-show.html">点击查看</a>
-				</li>
-
-				<li>
-					<img src="picture/thumb_1523172296.png" alt="乱丸黄金系列">
-					<p class="p1">乱丸黄金系列</p>
-					<p class="p2">GOLD SERIES</p>
-					<a href="product-show.html">点击查看</a>
-				</li>
-
-				<li>
-					<img src="picture/thumb_1523172307.png" alt="乱丸深水系列">
-					<p class="p1">乱丸深水系列</p>
-					<p class="p2">DEEP WATER SERIES</p>
-					<a href="product-show.html">点击查看</a>
-				</li>
-
-			</ul>
-		</div>
 		<div class="index_product">
 			<div class="main">
 				<a href="product.html" class="a_more">MORE</a>
@@ -96,7 +43,7 @@
 						<a href="product-show.html"><img src="picture/thumb_180408042946522891396.jpg" alt="黄金三角骨"><span>黄金三角骨</span></a>
 					</li>
 					<li class="li0 li_last">
-						<a href="product.html" class="a"><img src="picture/img_product1.jpg" alt="卤味系列"></a>
+						<a href="product.html" class="a"><img src="picture/img_product1.jpg" alt="卤味123系列"></a>
 						<a href="product.html" class="a"><img src="picture/img_product2.jpg" alt="卤味系列"></a>
 					</li>
 					<li class="li2 ">
@@ -114,55 +61,11 @@
 				</ul>
 			</div>
 		</div>
-		<div class="index_productlist">
-			<div class="main">
-				<dl>
-					<dt class="100006">乱丸卤味系列</dt>
-					<dd>
-						<a href="product-show.html" title="秘卤鸡翅尖">秘卤鸡翅尖</a>
-					</dd>
-					<dd>
-						<a href="product-show.html" title="香辣卤鸡爪">香辣卤鸡爪</a>
-					</dd>
-					<dd>
-						<a href="product-show.html" title="乱丸卤鸡爪">乱丸卤鸡爪</a>
-					</dd>
-					<dd>
-						<a href="product-show.html" title="秘卤炸鸡爪">秘卤炸鸡爪</a>
-					</dd>
-				</dl>
 
-				<dl>
-					<dt class="100007">乱丸黄金系列</dt>
-					<dd>
-						<a href="product-show.html" title="黄金三角骨">黄金三角骨</a>
-					</dd>
-					<dd>
-						<a href="product-show.html" title="黄金鸡翅尖">黄金鸡翅尖</a>
-					</dd>
-					<dd>
-						<a href="product-show.html" title="黄金炸鸡爪">黄金炸鸡爪</a>
-					</dd>
-					<dd>
-						<a href="product-show.html" title="黄金炸鸭舌">黄金炸鸭舌</a>
-					</dd>
-				</dl>
+		<!-- product list -->
+		<?php include_once "php/index/product_list.php";?>
+		<!-- product list end -->	
 
-				<dl>
-					<dt class="100008">乱丸深水系列</dt>
-					<dd>
-						<a href="product-show.html" title="招牌炸龙虾">招牌炸龙虾</a>
-					</dd>
-					<dd>
-						<a href="product-show.html" title="酥滑炸鱼块">酥滑炸鱼块</a>
-					</dd>
-					<dd>
-						<a href="product-show.html" title="招牌炸鱼尾">招牌炸鱼尾</a>
-					</dd>
-				</dl>
-
-			</div>
-		</div>
 		<div class="index_news">
 			<div class="main p_title">
 				<img src="picture/img_title2.png">
@@ -231,7 +134,7 @@
 						</li>
 					</ul>
 					<div class="fm_copyright">乱丸&nbsp;&nbsp;浙ICP备18045295号&nbsp;&nbsp;Copyright(C) 2018 all rights reserved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						
+
 					</div>
 				</div>
 			</div>
