@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+		<title>乱丸</title>
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/phone.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+
+	</head>
+
+	<body>
+		<header>
+			<a class="nav-icon"></a>
+			<a href="index.html" class="logo"></a>
+		</header>
+		<nav>
+			<div class="iconc">
+				<a class="nav-icon1"></a>
+			</div>
+			<ul>
+				<li class="active">
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="">我们</a>
+				</li>
+				<li>
+					<a href="">产品</a>
+				</li>
+				<li>
+					<a href="">资讯</a>
+				</li>
+				<li>
+					<a href="">加盟</a>
+				</li>
+				<li>
+					<a href="">联系</a>
+				</li>
+			</ul>
+		</nav>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".nav-icon").click(function() {
+					$("nav").css("z-index", "100");
+					$("nav").css("opacity", "1");
+
+				});
+			});
+			$(document).ready(function() {
+				$(".nav-icon1").click(function() {
+					$("nav").css("z-index", "98");
+					$("nav").css("opacity", "0");
+				});
+			});
+		</script>
+		<div class="h120"></div>
+		<div class="banner swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href=""><img src="images/banner1.jpg"></a>
+				</div>
+				<div class="swiper-slide">
+					<a href=""><img src="images/banner2.jpg"></a>
+				</div>
+				<div class="swiper-slide">
+					<a href=""><img src="images/banner3.jpg"></a>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<script type="text/javascript">
+			var swiper = new Swiper('.banner', {
+				autoplay: {
+					delay: 8000,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				effect: 'fade',
+				fadeEffect: {
+					crossFade: false,
+				}
+
+			});
+		</script>
+
+		<div class="index-pro">
+			<img src="images/title.png" class="title">
+			<div class="layout">
+				<ul class="list1">
+					<li>
+						<div class="img">
+							<img src="images/pro1.png">
+						</div>
+						<div class="word">
+							<p>乱丸卤味系列</p>
+							<span>MARINATED SERIES</span>
+						</div>
+						<a href="" class="dianji">前去品味</a>
+					</li>
+					<li>
+						<div class="img">
+							<img src="images/pro2.png">
+						</div>
+						<div class="word">
+							<p>乱丸黃金系列</p>
+							<span>GOLD SERIES</span>
+						</div>
+						<a href="" class="dianji">前去品味</a>
+					</li>
+					<li>
+						<div class="img">
+							<img src="images/pro3.png">
+						</div>
+						<div class="word">
+							<p>乱丸深水系列</p>
+							<span>DEEP WATER SERIES</span>
+						</div>
+						<a href="" class="dianji">前去品味</a>
+					</li>
+					<div class="clear"></div>
+				</ul>
+				<ul class="list2">
+					<li>
+						<a href="">
+							<img src="images/pro4.jpg">
+							<p>招牌炸龙虾</p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/pro5.jpg">
+							<p>黄金三角骨</p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/pro6.jpg">
+							<p>黄金鸡翅尖</p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/pro7.jpg">
+							<p>黄金炸鸡爪</p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/pro8.jpg">
+							<p>秘卤鸡翅尖</p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="images/pro9.jpg">
+							<p>香辣卤鸡爪</p>
+						</a>
+					</li>
+					<div class="clear"></div>
+				</ul>
+			</div>
+		</div>
+
+		<div class="pro-menu">
+			<div class="layout">
+				<dl>
+					<dt><span>乱丸卤味系列</span></dt>
+					<dd>
+						<a href="">秘卤鸡翅尖</a>
+					</dd>
+					<dd>
+                       <a href="">香辣卤鸡爪</a>
+					</dd>
+					<dd>
+                       <a href="">乱丸卤鸡爪</a>
+					</dd>
+					<dd>
+                       <a href="">秘卤炸鸡爪</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><span>乱丸黃金系列</span></dt>
+					<dd>
+						<a href="">黄金三角骨</a>
+					</dd>
+					<dd>
+                       <a href="">黄金鸡翅尖</a>
+					</dd>
+					<dd>
+                       <a href="">黄金炸鸡爪</a>
+					</dd>
+					<dd>
+                       <a href="">黄金炸鸭舌</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt><span>乱丸深水系列</span></dt>
+					<dd>
+						<a href="">招牌炸龙虾</a>
+					</dd>
+					<dd>
+                       <a href="">酥滑炸鱼块</a>
+					</dd>
+					<dd>
+                       <a href="">招牌炸鱼尾</a>
+					</dd>
+					
+				</dl>
+				<div class="clear"></div>
+			</div>
+		</div>
+		
+		<div class="index-news">
+			<img src="images/title1.png" class="title">
+			<ul class="layout">
+				<li>
+					<div class="img">
+						<a href=""><img src="images/news1.jpg"></a>
+					</div>
+					<div class="word">
+						<a href="">
+							<h3>怎么才能装修好卤炸小吃店铺？</h3>
+							<p>一家店铺的装修代表着店铺的门面，可以给消费者带来好的印象，一家装修好的卤炸小吃店更是可以影响着我们生意的好坏，更...</p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="img">
+						<a href=""><img src="images/news2.jpg"></a>
+					</div>
+					<div class="word">
+						<a href="">
+							<h3>卤炸小吃市场解析！</h3>
+							<p>现在市场上的炸卤小吃越来越多，有人就问了味道怎么样？生意好吗？未来的发展趋势是什么样子的？</p>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="img">
+						<a href=""><img src="images/news3.jpg"></a>
+					</div>
+					<div class="word">
+						<a href="">
+							<h3>卤味如何选择好的品牌？</h3>
+							<p>卤味作为传统的美味食物一直不断的丰富着我们的生活，也是当前餐饮市场上发展前景比较好的特色小吃，作为创业者，选...</p>
+						</a>
+					</div>
+				</li>
+				<div class="clear"></div>
+			</ul>
+			<a href="" class="more">查看更多</a>
+		</div>
+		
+		<footer>
+			<a href="index.html" class="foot-logo"><img src="images/logo2.png"></a>
+			<p>乱丸  浙ICP备18045295号  Copyright(C) 2018 all rights reserved   </p>
+		</footer>
+	</body>
+
+</html>

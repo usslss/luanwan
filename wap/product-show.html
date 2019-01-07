@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+		<title>乱丸</title>
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/phone.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+
+	</head>
+
+	<body>
+		<header>
+			<a class="nav-icon"></a>
+			<a href="index.html" class="logo"></a>
+		</header>
+		<nav>
+			<div class="iconc">
+				<a class="nav-icon1"></a>
+			</div>
+			<ul>
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="">我们</a>
+				</li>
+				<li class="active">
+					<a href="">产品</a>
+				</li>
+				<li>
+					<a href="">资讯</a>
+				</li>
+				<li>
+					<a href="">加盟</a>
+				</li>
+				<li>
+					<a href="">联系</a>
+				</li>
+			</ul>
+		</nav>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".nav-icon").click(function() {
+					$("nav").css("z-index", "100");
+					$("nav").css("opacity", "1");
+
+				});
+			});
+			$(document).ready(function() {
+				$(".nav-icon1").click(function() {
+					$("nav").css("z-index", "98");
+					$("nav").css("opacity", "0");
+				});
+			});
+		</script>
+		<div class="h120"></div>
+
+		<div class="ny-banner">
+			<img src="images/banner_product.jpg">
+		</div>
+
+		<div class="product-show">
+            <h3>招牌炸龙虾</h3>
+			<div class="product-banner swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href=""><img src="images/product-show.jpg"></a>
+					</div>
+					<div class="swiper-slide">
+						<a href=""><img src="images/product-show.jpg"></a>
+					</div>
+					<div class="swiper-slide">
+						<a href=""><img src="images/product-show.jpg"></a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<script type="text/javascript">
+				var swiper = new Swiper('.product-banner', {
+					autoplay: {
+						delay: 8000,
+						disableOnInteraction: false,
+					},
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true,
+					},
+					effect: 'fade',
+					fadeEffect: {
+						crossFade: false,
+					}
+
+				});
+			</script>
+			
+			<div class="layout">
+				<p><img src="images/wj.png"><img src="images/wj.png"><img src="images/wj.png">香辣</p>
+				<p><img src="images/wj.png"><img src="images/wj.png"><img src="images/wj1.png">外酥里嫩  </p>
+				<span class="c">
+					小贴士：为避免影响小主您的口感，如不喜欢太脆或太辣都可以跟提前乱丸店家说明哦！这样炸出来的龙虾才最符合您的口味哈~
+				</span>
+			</div>
+		</div>
+
+		<footer>
+			<a href="index.html" class="foot-logo"><img src="images/logo2.png"></a>
+			<p>乱丸 浙ICP备18045295号 Copyright(C) 2018 all rights reserved </p>
+		</footer>
+	</body>
+
+</html>
