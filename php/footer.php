@@ -18,128 +18,40 @@ $link_sum=$i;
 
 ?>
 
-		<div class="warp t09">
-			<div class="main t940">
-				<dl>
-					<dt>关于我们</dt>
-					<dd>
-						<a href="about1.html" rel="nofollow">公司简介</a>
-					</dd>
-					<dd>
-						<a href="about2.html" rel="nofollow">企业文化</a>
-					</dd>
-					<dd>
-						<a href="about3.html" rel="nofollow">经营理念</a>
-					</dd>
-					<dd>
-						<a href="about4.html" rel="nofollow">营销网络</a>
-					</dd>
-				</dl>
-				<dl>
-					<dt>产品中心</dt>
-					<dd>
-						<a href="product.html" rel="nofollow">找好茶</a>
-					</dd>
-					<dd>
-						<a href="product.html" rel="nofollow">找奶茶</a>
-					</dd>
-					<dd>
-						<a href="product.html" rel="nofollow">找口感</a>
-					</dd>
-					<dd>
-						<a href="product.html" rel="nofollow">找新鲜</a>
-					</dd>
-				</dl>
-				<dl>
-					<dt>投资分析</dt>
-					<dd>
-						<a href="show.html" rel="nofollow">奶茶店利润</a>
-					</dd>
-					<dd>
-						<a href="show.html" rel="nofollow">奶茶店成本</a>
-					</dd>
-					<a href="show.html" rel="nofollow" target="_blank">投诉删除</a>
-				</dl>
-				<dl>
-					<dt>加盟中心</dt>
-					<dd>
-						<a href="show.html" rel="nofollow">一点点奶茶加盟条件</a>
-					</dd>
-					<dd>
-						<a href="show.html" rel="nofollow">一点点奶茶加盟流程</a>
-					</dd>
-					<dd>
-						<a href="show.html" rel="nofollow">一点点奶茶加盟优势</a>
-					</dd>
-					<dd>
-						<a href="show.html" rel="nofollow">一点点奶茶加盟费用</a>
-					</dd>
-				</dl>
-				<dl>
-					<dt>商学院</dt>
-					<dd>
-						<a href="show.html" rel="nofollow">开店指南</a>
-					</dd>
-					<dd>
-						<a href="show.html" rel="nofollow">奶茶店成本控制</a>
-					</dd>
-					<dd>
-						<a href="show.html" rel="nofollow">奶茶店促销</a>
-					</dd>
-					<dd>
-						<a href="show.html" rel="nofollow">外卖服务流程</a>
-					</dd>
-				</dl>
-				<dl>
-					<dt>网站地图</dt>
-					<dd>
-						<a href="">网站地图</a>
-					</dd>
-					<dd>
-						<a href="">XML</a>
-					</dd>
-					<dd>
-						<a href="index.html" rel="nofollow">1点点奶茶官网</a>
-					</dd>
-					<dd>
-						<a href="show.html" rel="nofollow">一点点奶茶菜单</a>
-					</dd>
-				</dl>
-				<div class="link">
-					友情链接：
-					<?php
-				
-for ($i=1;$i<$link_sum;$i++){
-    if (($i % $line_show)==0){
-echo <<< EOT
-<a title="{$linkArr[$i]["link_name"]}" href="{$linkArr[$i]["link_url"]}" target="_blank">{$linkArr[$i]["link_name"]}</a><br>
+<div class="footer">
+			<div class="main">
+				<a href="index.html" class="footer_logo" ><img src="picture/logo1.png" ></a>
+				<div class="footer_menu">
+					<ul class="fm_ul">
+						<li>
+							<a href="product-show.html">这里不写友情链接吗</a>|</li>
+						<li>
+							<a href="product-show.html">黄金三角骨</a>|</li>
+						<li>
+							<a href="product-show.html">黄金鸡翅尖</a>|</li>
+						<li>
+							<a href="product-show.html">黄金炸鸡爪</a>
+						</li>
+						<li>
+							<a href="product-show.html">秘卤鸡翅尖</a>|</li>
+						<li>
+							<a href="product-show.html">香辣卤鸡爪</a>|</li>
+						<li>
+							<a href="product-show.html">酥滑炸鱼块</a>|</li>
+						<li>
+							<a href="product-show.html">招牌炸鱼尾</a>
+						</li>
+						<li>
+							<a href="product-show.html">黄金炸鸭舌</a>|</li>
+						<li>
+							<a href="product-show.html">乱丸卤鸡爪</a>|</li>
+						<li>
+							<a href="product-show.html">秘卤炸鸡爪</a>
+						</li>
+					</ul>
+					<div class="fm_copyright">乱丸&nbsp;&nbsp;浙ICP备18045295号&nbsp;&nbsp;Copyright(C) 2018 all rights reserved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-EOT;
-
-}else{
-echo <<< EOT
-<a title="{$linkArr[$i]["link_name"]}" href="{$linkArr[$i]["link_url"]}" target="_blank">{$linkArr[$i]["link_name"]}</a>
-
-EOT;
-}
-
-}
-
-
-if(($link_sum % $line_show)==0)
-{
-    
-} else{
-    echo "<br>";
-}
-
-?> 
-
-
-                               </div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="warp t10"> &copy; 2018 一点点奶茶官网 &middot; 一点点奶茶加盟 版权所有 </div>
-<!-- 
-<script>(function() {var _53code = document.createElement("script");_53code.src = "https://tb.53kf.com/code/code/10180534/4";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(_53code, s);})();</script>
- -->
