@@ -55,10 +55,10 @@ if ($page=='contact'){$class_contact="active";};
 						<a href="index.php">首页</a>
 					</li>
 					<li class="<?php echo $class_about;?>">
-						<a href="about.html">关于乱丸</a>
+						<a href="about.php">关于乱丸</a>
 					</li>
 					<li class="<?php echo $class_product;?>">
-						<a href="product.html">产品展示</a>
+						<a href="product.php">产品展示</a>
 					</li>
 					<li class="<?php echo $class_news;?>">
 						<a href="news.html">新闻资讯</a>

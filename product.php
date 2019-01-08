@@ -1,6 +1,6 @@
 ﻿<?php
 include_once "php/connect.php";
-$page = "index";
+$page = "product";
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,6 @@ $page = "index";
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/jquery.slides.min.js"></script>
 		<script type="text/javascript" src="js/base.js"></script>
-
 	</head>
 
 	<body>
@@ -23,31 +22,20 @@ $page = "index";
 		<?php include_once "php/header.php";?>
 		<!-- header end -->
 
-		<!-- slider -->
-		<?php include_once "php/index/slider.php";?>
-		<!-- sliker end -->
-
-		<!-- product class list -->
-		<?php include_once "php/index/product_class_list.php";?>
-		<!-- product class list end -->	
-
-		<!-- index product list -->
-		<?php include_once "php/index/index_product_list.php";?>
-		<!-- index product list end -->	
-
-
-		<!-- product list -->
-		<?php include_once "php/index/product_list.php";?>
-		<!-- product list end -->	
-
-		<!-- news list -->
-		<?php include_once "php/index/news_list.php";?>
-		<!-- news list end -->
+		<!-- product -->
+		<?php include_once "php/banner.php";?>
+		
+		<div class="content product_content main">
+			<div class="com_title"><img src="picture/img_title_product.png" alt="产品展示"></div>
+			<?php include_once "php/product/product_nav.php";?>		
+			<?php include_once "php/product/product_list.php";?>
+		</div>
+		<!-- product end -->
 
 		<!-- footer -->
 		<?php include_once "php/footer.php";?>
 		<!-- footer end -->
-		
+
 		<div class="return_top">
 			<a href="javascript:void(0)" title="回到顶部"></a>
 		</div>
