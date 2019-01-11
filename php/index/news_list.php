@@ -44,9 +44,9 @@ for ($i = 0; $i < $news_shownum; $i++) {
     //$news_title_short=mb_substr($newsarr[$i]["news_title"],0,22,'utf-8');
     echo <<< EOT
                 <dl class="in_dl col-md-4">
-					<dt><a href="{$newsarr[$i]["news_url"]}" title="{$newsarr[$i]["news_title"]}"><img src="{$newsarr[$i]["news_img_url"]}" alt="{$newsarr[$i]["news_title"]}"></a></dt>
+					<dt><a target="_blank" href="{$newsarr[$i]["news_url"]}" title="{$newsarr[$i]["news_title"]}"><img src="{$newsarr[$i]["news_img_url"]}" alt="{$newsarr[$i]["news_title"]}"></a></dt>
 					<dd>
-						<a href="{$newsarr[$i]["news_url"]}" title="{$newsarr[$i]["news_title"]}">{$newsarr[$i]["news_title"]}</a>
+						<a target="_blank" href="{$newsarr[$i]["news_url"]}" title="{$newsarr[$i]["news_title"]}">{$newsarr[$i]["news_title"]}</a>
 					</dd>
 					<dd class="dd1">{$newsarr[$i]["news_summary"]}</dd>
 				</dl>

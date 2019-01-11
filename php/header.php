@@ -61,15 +61,16 @@ if ($page=='contact'){$class_contact="active";};
 						<a href="product.php">产品展示</a>
 					</li>
 					<li class="<?php echo $class_news;?>">
-						<a href="news.html">新闻资讯</a>
+						<a href="news.php">新闻资讯</a>
 					</li>
 					<li class="<?php echo $class_join;?>">
-						<a href="join.html">招商加盟</a>
+						<a href="join.php">招商加盟</a>
 					</li>
 					<li class="<?php echo $class_contact;?>">
-						<a href="contact.html">联系我们</a>
+						<a href="contact.php">联系我们</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 		<!-- /menu -->	
+	

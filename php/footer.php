@@ -15,41 +15,50 @@ while ($row=mysqli_fetch_assoc($result)){
     
 }
 $link_sum=$i;
+//底部产品展示
+$product_show_max = 12; //最多显示产品数
+$sql_class = "SELECT * FROM product WHERE product_website='{$website}' LIMIT {$product_show_max}";
+$result = mysqli_query($link, $sql_class);
+$i = 0;
+
+while ($row = mysqli_fetch_assoc($result)) {
+	$footerProuctArr[$i]["product_id"] = $row["product_id"];
+	$footerProuctArr[$i]["product_name"] = $row["product_name"];
+	//伪静态?
+	$footerProuctArr[$i]["product_url"] = "product_show.php?product_id=".$row["product_id"];
+    $i++;
+}
+if ($i<$product_show_max){
+$product_show_max=$i;
+}
 
 ?>
 
 <div class="footer">
 			<div class="main">
-				<a href="index.html" class="footer_logo" ><img src="picture/logo1.png" ></a>
+				<a href="index.php" class="footer_logo" ><img src="picture/logo1.png" ></a>
 				<div class="footer_menu">
 					<ul class="fm_ul">
-						<li>
-							<a href="product-show.html">这里不写友情链接吗</a>|</li>
-						<li>
-							<a href="product-show.html">黄金三角骨</a>|</li>
-						<li>
-							<a href="product-show.html">黄金鸡翅尖</a>|</li>
-						<li>
-							<a href="product-show.html">黄金炸鸡爪</a>
-						</li>
-						<li>
-							<a href="product-show.html">秘卤鸡翅尖</a>|</li>
-						<li>
-							<a href="product-show.html">香辣卤鸡爪</a>|</li>
-						<li>
-							<a href="product-show.html">酥滑炸鱼块</a>|</li>
-						<li>
-							<a href="product-show.html">招牌炸鱼尾</a>
-						</li>
-						<li>
-							<a href="product-show.html">黄金炸鸭舌</a>|</li>
-						<li>
-							<a href="product-show.html">乱丸卤鸡爪</a>|</li>
-						<li>
-							<a href="product-show.html">秘卤炸鸡爪</a>
-						</li>
+<?php
+
+for ($i = 0; $i < $product_show_max; $i++) {
+	if((($i+1)%4)==0){
+		echo <<< EOT
+		<li><a href="{$footerProuctArr[$i]["product_url"]}">{$footerProuctArr[$i]["product_name"]}</a></li>
+EOT;
+	}else{	
+		echo <<< EOT
+						<li><a href="{$footerProuctArr[$i]["product_url"]}">{$footerProuctArr[$i]["product_name"]}</a>|</li>
+EOT;
+
+	}
+
+
+
+}
+?>
 					</ul>
-					<div class="fm_copyright">乱丸&nbsp;&nbsp;浙ICP备18045295号&nbsp;&nbsp;Copyright(C) 2018 all rights reserved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="fm_copyright">Copyright © 2019 杭州奇思妙想品牌管理有限公司&nbsp;浙ICP备18045295号
 
 					</div>
 				</div>
