@@ -5,13 +5,14 @@ $sql_banner = "SELECT * FROM img WHERE class='{$banner_class}' AND website='{$we
 $result = mysqli_query($link, $sql_banner);
 
 while ($row = mysqli_fetch_assoc($result)) {
-    $banner_show_url = $row["url"];
+    $banner_show_url = $row["wap_url"];
     $banner_show_alt = $row["alt"];
 
 }
 
 echo <<< EOT
-        <div class="banner"><img src="{$banner_show_url}" alt="{$banner_show_alt}"></div>
-
+		<div class="ny-banner">
+			<img src="{$banner_show_url}">
+		</div>
 EOT;
 ?>

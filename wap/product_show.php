@@ -1,5 +1,5 @@
-﻿<?php
-include_once "php/connect.php";
+<?php
+include_once "../php/connect.php";
 $page="product";
 
 if (isset($_POST["product_id"])){
@@ -17,7 +17,7 @@ $result=mysqli_query($link, $sql_hot);
 while ($row=mysqli_fetch_assoc($result)){
     $show_product_class=$row["product_class"];
 	$show_product_title=$row["product_name"];
-	$show_product_img_url=$row["product_img_url"];
+	$show_product_img_url=$row["product_wap_img_url"];
     $show_product_all=$row["product_all"];
     $show_product_addtime=substr($row["product_addtime"],0,20);
 	//伪静态?
@@ -38,49 +38,70 @@ while ($row=mysqli_fetch_assoc($result)){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
 		<title><?php echo $show_product_title;?> - <?php echo $page_title;?></title>
 		<meta name="keywords" content="<?php echo $page_keywords;?>" />
 		<meta name="description" content="<?php echo $page_description;?>">	
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/jquery.slides.min.js"></script>
-		<script type="text/javascript" src="js/base.js"></script>
+		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/phone.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+
 	</head>
 
 	<body>
 		<!-- header -->
 		<?php include_once "php/header.php";?>
 		<!-- header end -->
-		
+		<div class="h120"></div>
+
 		<!-- banner -->
 		<?php include_once "php/banner.php";?>
 		<!-- banner end -->
 
-		<div class="content product_content main">
-			<div class="pc_left"><img src="<?php echo $show_product_img_url;?>"></div>
-			<div class="pc_right">
-				<div class="pc_more">
-					<p class="p_title"><?php echo $show_product_title;?></p>
-					<p class="p_remark"><?php echo $show_product_all;?></p>
+		<div class="product-show">
+            <h3><?php echo $show_product_title;?></h3>
+			<div class="product-banner swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href=""><img src="<?php echo $show_product_img_url;?>"></a>
+					</div>
 				</div>
-				<div class="con">
-				</div>
+				
+			</div>
+			<script type="text/javascript">
+				var swiper = new Swiper('.product-banner', {
+					autoplay: {
+						delay: 8000,
+						disableOnInteraction: false,
+					},
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true,
+					},
+					effect: 'fade',
+					fadeEffect: {
+						crossFade: false,
+					}
+
+				});
+			</script>
+			
+			<div class="layout">
+				<span class="c">
+				<?php echo $show_product_all;?>
+				</span>
 			</div>
 		</div>
 
 		<!-- footer -->
 		<?php include_once "php/footer.php";?>
 		<!-- footer end -->
-
-		<div class="return_top">
-			<a href="javascript:void(0)" title="回到顶部"></a>
-		</div>
 
 	</body>
 

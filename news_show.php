@@ -48,7 +48,7 @@ $result = mysqli_query($link, $sql_click);
 
 	<head>
 		<meta charset="UTF-8">
-		<title><?php echo $page_title;?> - <?php echo $show_news_title;?></title>
+		<title><?php echo $show_news_title;?> - <?php echo $page_title;?></title>
 		<meta name="keywords" content="<?php echo $page_keywords;?>" />
 		<meta name="description" content="<?php echo $page_description;?>">	
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
