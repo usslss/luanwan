@@ -37,7 +37,7 @@ header a.nav-icon{display:block;width:0.32rem;height:0.29rem;background:url(../i
 header a.logo{display:block;width:2.29rem;height:0.76rem;background:url(../images/logo.png) no-repeat;background-size:100% 100%;position:absolute;top:0.23rem;left:50%;margin-left:-1.145rem;}
 
 nav{width:1.6rem;position:fixed;top:0;height:100%;opacity: 0;
-    
+    z-index:-100;
     -webkit-transition: all .5s linear;
     transition: all .5s linear;
     }

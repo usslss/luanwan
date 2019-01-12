@@ -42,7 +42,6 @@ $i = 1;
 while ($row = mysqli_fetch_assoc($result)) {
 	$productArr[$i]["product_id"] = $row["product_id"];
 	$productArr[$i]["product_name"] = $row["product_name"];
-	$productArr[$i]["product_summary"] = $row["product_summary"];
 	$productArr[$i]["product_img_url"] = $row["product_img_url"];
 	$productArr[$i]["product_addtime"] = substr($row["product_addtime"], 5, 5);
     //根据伪静态的定义重写转向url
