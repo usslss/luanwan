@@ -17,7 +17,7 @@ $result=mysqli_query($link, $sql_hot);
 while ($row=mysqli_fetch_assoc($result)){
     $show_product_class=$row["product_class"];
 	$show_product_title=$row["product_name"];
-	$show_product_img_url=$row["product_wap_img_url"];
+	$show_product_img_url=$row["product_wap_show_img_url"];
     $show_product_all=$row["product_all"];
     $show_product_addtime=substr($row["product_addtime"],0,20);
 	//伪静态?
@@ -94,7 +94,7 @@ while ($row=mysqli_fetch_assoc($result)){
 			
 			<div class="layout">
 				<span class="c">
-				<?php echo $show_product_all;?>
+				<?php echo $show_product_all;?>			
 				</span>
 			</div>
 		</div>

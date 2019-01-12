@@ -19,7 +19,7 @@ $link_sum=$i;
 ?>
 
 		<footer>
-			<a href="index.html" class="foot-logo"><img src="images/logo2.png"></a>
+			<a href="index.php" class="foot-logo"><img src="images/logo2.png"></a>
 			<p>乱丸  浙ICP备18045295号  Copyright(C) 2018 all rights reserved   </p>
 		</footer>
 
