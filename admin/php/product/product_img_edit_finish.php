@@ -1,6 +1,6 @@
 <?php
 include "../connect.php";
-
+include "../imgcut.php";
 $product_id = $_POST["product_id"];
 
 //pc端图片上传
@@ -34,7 +34,7 @@ if ($_FILES["file_pc"]["error"]) {
     }
     // 裁剪pc图片
     if (isset($file_pc_url)) {
-        include "../imgcut.php";
+
         $source = $file_pc_url;
 
         $width = 500; // 裁剪后的宽度
@@ -87,7 +87,7 @@ if ($_FILES["file_wap"]["error"]) {
     }
     // 裁剪wap图片
     if (isset($file_wap_url)) {
-        include "../imgcut.php";
+
         $source = $file_wap_url;
 
         $width = 500; // 裁剪后的宽度

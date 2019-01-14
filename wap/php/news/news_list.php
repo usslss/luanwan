@@ -26,7 +26,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $newsarr[$i]["news_id"] = $row["news_id"];
     $newsarr[$i]["news_title"] = $row["news_title"];
     $newsarr[$i]["news_summary"] = $row["news_summary"];
-    $newsarr[$i]["news_img_url"] = $row["news_wap_img_url"];
+    $newsarr[$i]["news_img_url"] = $row["news_wap_show_img_url"];
     $newsarr[$i]["news_url"] = "news_show.php?news_id=" . $row["news_id"];
 
     $i++;

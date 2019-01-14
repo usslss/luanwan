@@ -64,13 +64,14 @@ include('php/identify.php');
         //方法级渲染
         table.render({
             elem: '#LAY_table_user'
-            ,url: 'php/slider/slider_query.php'
-            ,where: {slider_page: 'index',slider_class: 'rqzd' }    
+            ,url: 'php/img/img_query.php'
+            ,where: {img_page: 'product',img_class: 'class' }    
             ,cols: [[
-                {field:'slider_id', title: '轮播ID', sort: true, fixed: false,width:100}
-                ,{field:'slider_name', title: '轮播名称', sort: false, fixed: false,width:180}
-                ,{field:'slider_img_url_main', title: '轮播img地址', sort: false, fixed: false}
-                ,{field:'slider_show', title:'显示顺序', sort: false, fixed: false,width:100}
+                {field:'id', title: 'ID', sort: true, fixed: false,width:100}
+                ,{field:'name', title: '名称', sort: false, fixed: false,width:180}
+                ,{field:'url', title: 'img地址', sort: false, fixed: false}
+                ,{field:'wap_url', title: '移动端img地址', sort: false, fixed: false}  
+                ,{field:'alt', title: '图片alt', sort: false, fixed: false}                  
                 ,{field:'right', title: '操作', width:178,align:'center',toolbar:"#barDemo", fixed: 'right',width:300}
             ]]
             ,id: 'testReload'
