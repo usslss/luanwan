@@ -101,35 +101,53 @@
                         
                         <tr>
                             <th colspan="1" width="100">摘要文字</th>
-                            <td colspan="1" width="300"><div class="layui-input-inline">
+                            <td colspan="3" width="300"><div class="layui-input-inline">
                   <input type="text" style="width:400px" name="news_summary" required="" lay-verify="required"
                   autocomplete="off" class="layui-input"></td>
-                  <td colspan="1" width="100">新闻分类</td>
-                  <td colspan="1">                  
-                  <select name='news_class' >
-                  <option value ="星巴克加盟新闻">星巴克加盟新闻</option>
 
-                  </select>
+
                   
-                  </td>
                   
-                  </tr>  
-                        <tr>
-                            <th colspan="1" valign="top">摘要配图</th>
-                            <td colspan="3"><div class="layui-input-inline">
-                            
+
+                  <tr>
+                        <th colspan="1" valign="top">PC配图</th>
+                        <td colspan="1">
+                            <div class="layui-input-inline">
+
                                 <div id="divPreview">
-        <img id="imgHeadPhoto" src="images/noperson.jpg" style="width: 300px; height: 100px; border: solid 1px #d2e2e2;"
-            alt="" />
-</div>
+                                    <img id="imgHeadPhoto1" src="../../images/noperson.jpg" style="width: 300px; height: 100px; border: solid 1px #d2e2e2;"
+                                        alt="" />
+                                </div>
 
-<!--file定义输入字段和 "浏览"按钮，供文件上传。-->
-    <input type="file" name="file" onchange="PreviewImage(this,'imgHeadPhoto','divPreview');" size="20" />
+                                <!--file定义输入字段和 "浏览"按钮，供文件上传。-->
+                                <input type="file" name="file_pc" onchange="PreviewImage(this,'imgHeadPhoto1','divPreview');" size="20" />
+
+                        </td>
+                        <th colspan="1" valign="top" width="70px">WAP配图</th>
+                        <td colspan="1">
+                            <div class="layui-input-inline">
+
+                                <div id="divPreview">
+                                    <img id="imgHeadPhoto2" src="../../images/noperson.jpg" style="width: 300px; height: 100px; border: solid 1px #d2e2e2;"
+                                        alt="" />
+                                </div>
+
+                                <!--file定义输入字段和 "浏览"按钮，供文件上传。-->
+                                <input type="file" name="file_wap" onchange="PreviewImage(this,'imgHeadPhoto2','divPreview');"
+                                    size="20" />
 
 
 
-                  
-                  </td></tr>                            
+
+                        </td>
+                    </tr>
+
+
+
+
+
+
+
                         <tr>
                             <th colspan="1" valign="top">正文内容</th>
                             <td colspan="3"> <script id="editor" type="text/plain" style="width:1024px;height:250px;">

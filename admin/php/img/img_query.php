@@ -15,22 +15,15 @@ if (isset($_GET["limit"])) {
     $list_show = $_GET["limit"];
 }
 
-/*
-if (isset($_GET["img_class"])) {
-    
-}
-
-if (isset($_GET["img_page"])) {   
-}
-
-*/
-
 $query_page = $_GET["img_page"];
 $query_class = $_GET["img_class"];
+$query_info=$query_page."_".$query_class;
 
 
-$sqlmsg = "SELECT * FROM img WHERE class='{$query_page}_{$query_class}' AND website='{$website}'";
-
+$sqlmsg = "SELECT * FROM img WHERE class='{$query_info}' AND website='{$website}'";
+if($query_class =="banner"){
+    $sqlmsg = "SELECT * FROM img WHERE class LIKE '%_banner' AND website='{$website}'";
+}
 //数量
 $sqlsum = "SELECT count(*) FROM img WHERE class='{$query_page}_{$query_class}' AND website='{$website}'";
 $a = mysqli_query($link, $sqlsum);
@@ -50,6 +43,7 @@ if ($msglink->num_rows > 0) {
                 "\"en_name\":\"" . $row["en_name"] . "\"," .
                 "\"wap_url\":\"" . $row["wap_url"] . "\"," .
                 "\"alt\":\"" . $row["alt"] . "\"," .
+                "\"class\":\"" . $row["class"] . "\"," .
                 "\"url\":\"" . $row["url"] . "\"},";
         }
         $i = $i + 1;

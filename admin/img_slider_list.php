@@ -6,7 +6,7 @@ include('php/identify.php');
   
   <head>
     <meta charset="UTF-8">
-    <title>slider_index_list</title>
+    <title>img_slider_list</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
@@ -27,7 +27,7 @@ include('php/identify.php');
     <div class="x-nav">
       <span class="layui-breadcrumb">
         <a target="_parent" href="index.php">首页</a>
-        <a href="">轮播管理</a>
+        <a href="">图片管理</a>
         <a>
           <cite>主页轮播</cite></a>
       </span>
@@ -52,7 +52,7 @@ include('php/identify.php');
 
 <script type="text/html" id="barDemo">
     <a class="layui-btn layui-btn-xs " onclick="" lay-event="edit"><i class="layui-icon">&#xe642;</i>编辑</a>
-    <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del"><i class="layui-icon">&#xe640;</i>删除</a>
+    <!--<a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del"><i class="layui-icon">&#xe640;</i>删除</a>-->
 </script>
 
 
@@ -67,12 +67,12 @@ include('php/identify.php');
             ,where: {img_page: 'index',img_class: 'slider' }    
             ,cols: [[
                 {field:'id', title: 'ID', sort: true, fixed: false,width:100}
-                ,{field:'name', title: '名称', sort: false, fixed: false,width:180}
-                ,{field:'en_name', title: '英文名称', sort: false, fixed: false,width:180}
+                ,{field:'name', title: '名称', sort: false, fixed: false,width:180}   
+                ,{field:'class', title: '图片类别', sort: false, fixed: false,width:180}             
+                ,{field:'alt', title: '图片alt', sort: false, fixed: false}   
                 ,{field:'url', title: 'img地址', sort: false, fixed: false}       
-                ,{field:'wap_url', title: '移动端img地址', sort: false, fixed: false}  
-                ,{field:'alt', title: '图片alt', sort: false, fixed: false}             
-                ,{field:'right', title: '操作', width:178,align:'center',toolbar:"#barDemo", fixed: 'right',width:200}
+                ,{field:'wap_url', title: '移动端img地址', sort: false, fixed: false}           
+                ,{field:'right', title: '操作', width:178,align:'center',toolbar:"#barDemo", fixed: 'right',width:100}
             ]]
             ,id: 'testReload'
             ,page: true
@@ -85,7 +85,7 @@ include('php/identify.php');
             var data = obj.data;
             if(obj.event === 'edit'){
                 var c='php/img/img_edit.php?id='+data.id;
-                x_admin_show('图片编辑',c,600,650);
+                x_admin_show('图片编辑',c,600,530);
             } else if(obj.event === 'del'){
                 layer.confirm('确定删除这个图片?', function(index){
               	  console.log(data);

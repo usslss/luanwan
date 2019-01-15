@@ -31,10 +31,9 @@ include('php/identify.php');
           <li class="layui-nav-item">
             <a href="javascript:;">上传</a>
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
-              
-              <dd><a onclick="x_admin_show('上传图片','php/add/img_add.php',600,420)"><i class="iconfont">&#xe6a8;</i>图片</a></dd>
-               <dd><a onclick="x_admin_show('添加新闻','news_add.php',1200,810)"><i class="iconfont">&#xe6fc;</i>新闻</a></dd>
-               <dd><a onclick="x_admin_show('添加友情链接','php/add/link_add.php',800,260)"><i class="iconfont">&#xe6fc;</i>友情链接</a></dd>
+                <dd><a onclick="x_admin_show('添加新闻','php/add/news_add.php',1200,810)"><i class="iconfont">&#xe6fc;</i>新闻</a></dd>           
+                <dd><a onclick="x_admin_show('添加产品','php/add/product_add.php',850,650)"><i class="iconfont">&#xe6a8;</i>产品</a></dd>
+              <!--  <dd><a onclick="x_admin_show('添加友情链接','php/add/link_add.php',800,260)"><i class="iconfont">&#xe6fc;</i>友情链接</a></dd> -->
             </dl>
           </li>
         </ul>
@@ -56,7 +55,7 @@ include('php/identify.php');
     <div class="left-nav">
       <div id="side-nav">
         <ul id="nav">
-
+<!--
             <li>
                 <a href="javascript:;">
                     <i class="iconfont">&#xe723;</i>
@@ -110,7 +109,7 @@ include('php/identify.php');
                     </li>
                 </ul>
             </li>
-
+-->
             <li>
                 <a href="javascript:;">
                     <i class="iconfont">&#xe6a8;</i>
@@ -131,7 +130,7 @@ include('php/identify.php');
                         </a>
                     </li >
                     <li>
-                        <a _href="slider_store_list.php">
+                        <a _href="img_banner_list.php">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>网页banner图片</cite>
                         </a>
@@ -171,25 +170,6 @@ include('php/identify.php');
                 </ul>
             </li>
 
-
-            
-<!-- 
-            <li>
-                <a href="javascript:;">
-                    <i class="iconfont">&#xe723;</i>
-                    <cite>留言管理</cite>
-                    <i class="iconfont nav_right">&#xe697;</i>
-                </a>
-                <ul class="sub-menu">
-                    <li>
-                        <a _href="msg_list.php">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>留言列表</cite>
-                        </a>
-                    </li >
-                </ul>
-            </li>
--->
             <li>
                 <a href="javascript:;">
                     <i class="iconfont">&#xe723;</i>

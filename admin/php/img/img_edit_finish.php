@@ -9,6 +9,8 @@ $width_wap = 0;
 $height_wap = 0;
 //$width_wap_show = 0;
 //$height_wap_show = 0;
+$img_cut_pc=1;
+$img_cut_wap=1;
 
 if (isset($_POST["name"])) {
     $img_name = $_POST["name"];
@@ -50,12 +52,27 @@ if ($before_img_class == 'index_slider') {
     $width_wap = 750;
     $height_wap = 400;
 
-/*wap展示页图片的宽高
-$width_wap_show = 670;
-$height_wap_show = 190;
- */
-
 }
+$array=explode('_', $before_img_class);
+if ($array[1] == 'banner') {
+
+    //pc图片的宽高
+        $width_pc = 1920;
+        $height_pc = 462;
+    
+    //wap图片的宽高
+        $width_wap = 750;
+        $height_wap = 400;
+    
+}
+
+if ($before_img_class == 'product_class') {
+
+ $img_cut_pc=0;
+ $img_cut_wap=0;
+    
+}
+
 
 //pc端图片上传
 if ($_FILES["file_pc"]["error"]) {
@@ -89,7 +106,7 @@ if ($_FILES["file_pc"]["error"]) {
         exit;
     }
     // 裁剪pc图片
-    if (isset($file_pc_url)) {
+    if (isset($file_pc_url)&($img_cut_pc==1)) {
 
         $source = $file_pc_url;
 
@@ -143,7 +160,7 @@ if ($_FILES["file_wap"]["error"]) {
         exit;
     }
     // 裁剪wap图片
-    if (isset($file_wap_url)) {
+    if (isset($file_wap_url)&($img_cut_wap==1)) {
 
         $source = $file_wap_url;
 

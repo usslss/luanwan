@@ -62,45 +62,7 @@ $newsclass_sum=$i;
     
     <div class="x-body">
     
- <div class="layui-row">
-        <form class="layui-form layui-col-md12 x-so layui-form-pane">
 
-
-
-
-
-          <div class="layui-input-inline">                     
-            <select name="news_class">
-              <option>网站名</option>
-<?php			
-if (isset($_GET["news_class"])){
-    $query_news_class=$_GET["news_class"];
-}
-else{
-    $query_news_class="网站名";
-}
-
-for ($i=0;$i<$newsclass_sum;$i++){    
-    if($newsarr[$i]["news_class"]==$query_news_class){
-        echo <<< EOT
-        <option selected="selected">{$newsarr[$i]["news_class"]}</option>
-EOT;
-    }
-        else {         
-            echo <<< EOT
-        <option>{$newsarr[$i]["news_class"]}</option>
-EOT;
-        }
-    
-
-}
-?>               
-            </select>
-          </div>
-         
-          <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i>搜索</button>
-        </form>
-      </div>
 
 <table class="layui-hide" id="LAY_table_user" lay-filter="useruv"></table>
 
