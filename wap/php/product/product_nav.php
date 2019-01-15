@@ -47,5 +47,6 @@ for ($i = 0; $i < $nav_sum; $i++) {
 EOT;
 }
 ?>
+<div class="clear"></div>
 					</ul>
 				</div>
