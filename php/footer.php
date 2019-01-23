@@ -1,20 +1,19 @@
 <?php
 include_once "php/connect.php";
 
-$sql_link="SELECT * FROM link WHERE link_website='{$website}'";
-$result=mysqli_query($link, $sql_link);
+$sql_link = "SELECT * FROM link WHERE link_website='{$website}'";
+$result = mysqli_query($link, $sql_link);
 
-$i=1;
-$line_show=15;
-while ($row=mysqli_fetch_assoc($result)){
-    
+$i = 1;
+$line_show = 15;
+while ($row = mysqli_fetch_assoc($result)) {
+
     $linkArr[$i]["link_name"] = $row["link_name"];
     $linkArr[$i]["link_url"] = $row["link_url"];
     $i++;
-    
-    
+
 }
-$link_sum=$i;
+$link_sum = $i;
 //底部产品展示
 $product_show_max = 12; //最多显示产品数
 $sql_class = "SELECT * FROM product WHERE product_website='{$website}' LIMIT {$product_show_max}";
@@ -22,14 +21,14 @@ $result = mysqli_query($link, $sql_class);
 $i = 0;
 
 while ($row = mysqli_fetch_assoc($result)) {
-	$footerProuctArr[$i]["product_id"] = $row["product_id"];
-	$footerProuctArr[$i]["product_name"] = $row["product_name"];
-	//伪静态?
-	$footerProuctArr[$i]["product_url"] = "product_show.php?product_id=".$row["product_id"];
+    $footerProuctArr[$i]["product_id"] = $row["product_id"];
+    $footerProuctArr[$i]["product_name"] = $row["product_name"];
+    //伪静态?
+    $footerProuctArr[$i]["product_url"] = "product_show.php?product_id=" . $row["product_id"];
     $i++;
 }
-if ($i<$product_show_max){
-$product_show_max=$i;
+if ($i < $product_show_max) {
+    $product_show_max = $i;
 }
 
 ?>
@@ -42,18 +41,16 @@ $product_show_max=$i;
 <?php
 
 for ($i = 0; $i < $product_show_max; $i++) {
-	if((($i+1)%4)==0){
-		echo <<< EOT
+    if ((($i + 1) % 4) == 0) {
+        echo <<< EOT
 		<li><a href="{$footerProuctArr[$i]["product_url"]}">{$footerProuctArr[$i]["product_name"]}</a></li>
 EOT;
-	}else{	
-		echo <<< EOT
+    } else {
+        echo <<< EOT
 						<li><a href="{$footerProuctArr[$i]["product_url"]}">{$footerProuctArr[$i]["product_name"]}</a>|</li>
 EOT;
 
-	}
-
-
+    }
 
 }
 ?>
@@ -64,3 +61,22 @@ EOT;
 				</div>
 			</div>
 		</div>
+		<div style="color:#ffffff;width:100%; margin:0 auto; text-align:center; border-top:1px dashed #999; background-color:#f6f6f6; padding:0 5px; line-height:30px; color:#999999; box-sizing: border-box;
+">
+            友情链接 :
+<?php
+for ($i = 1; $i < $link_sum; $i++) {
+    if ($i != ($link_sum - 1)) {
+        echo <<< EOT
+		<a style="color:#999" title="{$linkArr[$i]["link_name"]}" href="{$linkArr[$i]["link_url"]}" target="_blank">{$linkArr[$i]["link_name"]}</a>、
+EOT;
+    } else {
+        echo <<< EOT
+		<a style="color:#999" title="{$linkArr[$i]["link_name"]}" href="{$linkArr[$i]["link_url"]}" target="_blank">{$linkArr[$i]["link_name"]}</a>
+EOT;
+    }
+
+}
+?>
+
+        </div>

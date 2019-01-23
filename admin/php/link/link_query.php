@@ -29,7 +29,7 @@ if (isset($_GET["website"])){
     $query_website='%';
 }
 
-
+$query_website=$website;
 
 $sqllink = "SELECT * FROM link WHERE link_website LIKE '{$query_website}' ";
 

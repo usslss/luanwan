@@ -2,7 +2,7 @@
 
 include('php/identify.php');
 
-//获取关键词的页面和网站属性
+/*获取关键词的页面和网站属性
 $sql_getLinkWebsite="SELECT DISTINCT link_website FROM link";
 
 $result1=mysqli_query($link, $sql_getLinkWebsite);
@@ -14,7 +14,7 @@ while ($row=mysqli_fetch_assoc($result1)){
 }
    
 $website_sum=$i;
-
+*/
 
 
 
@@ -58,53 +58,6 @@ $website_sum=$i;
     
 
 
-
-
-
-
- <div class="layui-row">
-        <form class="layui-form layui-col-md12 x-so layui-form-pane">
-
-
-
-
-
-          <div class="layui-input-inline">                     
-            <select name="website">
-              <option>网站名</option>
-<?php			
-if (isset($_GET["website"])){
-    $query_website=$_GET["website"];
-}
-else{
-    $query_website="网站名";
-}
-
-for ($i=0;$i<$website_sum;$i++){    
-    if($websiteArr[$i]==$query_website){
-        echo <<< EOT
-        <option selected="selected">{$websiteArr[$i]}</option>
-EOT;
-    }
-        else {         
-            echo <<< EOT
-            <option>{$websiteArr[$i]}</option>
-EOT;
-        }
-    
-
-}
-?>               
-            </select>
-          </div>
-         
-          <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i>搜索</button>
-        </form>
-      </div>
-
-
-
-
 <table class="layui-hide" id="LAY_table_user" lay-filter="useruv"></table>
 
 
@@ -135,7 +88,7 @@ EOT;
             elem: '#LAY_table_user'
             ,url: 'php/link/link_query.php'
             ,method: 'get'
-            ,where: {website: '<?php echo $query_website;?>',xx:5 }
+            ,where: {website: 'na',xx:5 }
             ,cols: [[
                 {field:'link_id', title: 'ID', sort: true, fixed: false,width:100}
                 ,{field:'link_name', title: '友情链接名称', sort: false, fixed: false,width:300}
